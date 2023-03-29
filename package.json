@@ -1,0 +1,25 @@
+{
+  "name": "placecharity",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mikarific",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.3.4",
+    "discord.js": "^14.8.0",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.36.0",
+    "file-type": "^16.5.4",
+    "form-data": "^4.0.0",
+    "i18n": "^0.15.1",
+    "match-sorter": "^6.3.1",
+    "mongodb": "^5.1.0",
+    "node-cron": "^3.0.2",
+    "sharp": "^0.31.3",
+    "ws": "^8.13.0"
+  }
+}
