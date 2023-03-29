@@ -2,7 +2,7 @@ const { I18n } = require('i18n');
 const path = require('path');
 
 const i18n = new I18n({
-	locales: ['en-US', 'tok'],
+	locales: ['en-US', 'th', 'tok'],
 	fallbacks: { 'en-GB': 'en-US' },
 	defaultLocale: 'en-US',
 	directory: path.join('./', 'locales'),
