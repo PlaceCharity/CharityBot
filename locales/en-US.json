@@ -105,7 +105,7 @@
 	"command.grid.subcommand.tracked.response.jsonInvalid.name": ":x: Template Link Invalid!",
 	"command.grid.subcommand.tracked.response.jsonInvalid.description": "Charity could not read this template link!",
 	"command.grid.subcommand.tracked.response.notFound.name": ":x: Template Not Found!",
-	"command.grid.subcommand.tracked.response.notFound.description": "{{{guild}}} is already not tracking a template!",
+	"command.grid.subcommand.tracked.response.notFound.description": "{{{guild}}} is not tracking a template!",
 	"command.grid.subcommand.image.subcommand.attachment.response.notImage.name": ":x: Template Image Invalid!",
 	"command.grid.subcommand.image.subcommand.attachment.response.notImage.description": "Charity could not read the attachment.",
 	"command.grid.subcommand.image.subcommand.link.response.notFound.name": ":x: Image Link Invalid!",

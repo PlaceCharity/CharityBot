@@ -84,7 +84,7 @@ module.exports = {
 			.setColor(parseInt(process.env.BOT_COLOR))
 			.setTitle(i18n.__('command.pin.response.title', { guild: interaction.guild.name }))
 			.setDescription(
-				`${i18n.__('command.pin.response.description.lastModifiedBy', { username: `<@${template.owner}>` })}\n\n` +
+				`${i18n.__('command.pin.response.description.lastModifiedBy', { username: `<@${template.owner}>` })}\n` +
                 `${i18n.__('command.pin.response.description.lastUpdated', { timestamp: `<t:${Math.round(Date.now() / 1000)}:f>` })}\n\n` +
                 `${templateInfo.animated ? i18n.__('command.pin.response.description.frame', templateInfo) + '\n\n' : ''}` +
                 `${i18n.__('command.pin.response.description.correctPixels', progress)}\n` +
@@ -112,6 +112,7 @@ module.exports = {
 			pinned: true,
 			channel: message.channelId,
 			message: message.id,
+			locale: locale,
 		});
 	},
 	async autocomplete(interaction, locale, client) {

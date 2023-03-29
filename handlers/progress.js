@@ -26,10 +26,12 @@ function progressBar(value, min, max, width) {
 module.exports = {
 	async init(client) {
 		cron.schedule('*/5 * * * *', async () => {
+			i18n.setLocale('en-US');
 			const pinnedTemplates = await database.getPinnedTemplates();
 			for (const template of pinnedTemplates) {
 				try {
 					if (template === null || template === undefined || template.json === null || template.json === undefined) continue;
+					if (template.locale !== null && template.locale !== undefined) i18n.setLocale(template.locale);
 					const res = await axios.get(template.json, { responseType: 'json' });
 					const json = res.data;
 					if (json === null || json === undefined) continue;
