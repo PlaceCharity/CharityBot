@@ -6,10 +6,7 @@ async function extractFrame(image, frameWidth, frameHeight, frameIndex) {
 	const gridWidth = Math.round((await image.metadata()).width / frameWidth);
 	const gridX = frameIndex % gridWidth;
 	const gridY = Math.floor(frameIndex / gridWidth);
-	const frame = image.extract({ left: gridX * frameWidth, top: gridY * frameHeight, width: frameWidth, height: frameHeight });
-	const alpha = await frame.clone().extractChannel('alpha').toColourspace('b-w').threshold(1).toBuffer();
-	const alphalessFrame = await frame.removeAlpha().toBuffer();
-	return await sharp(alphalessFrame).joinChannel(alpha);
+	return image.extract({ left: gridX * frameWidth, top: gridY * frameHeight, width: frameWidth, height: frameHeight });
 }
 
 const getTrimAlphaInfo = async (pipeline, width, height) =>
